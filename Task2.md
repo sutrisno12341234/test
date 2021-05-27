@@ -1,27 +1,10 @@
-# Task 2
+Kondisi Digunakan Banyak
 
-#### 1. Make the code below cleaner, better and reusable
+echo 'Nilai Anda: '.($score > 10 ? ($age > 10 ? 'Rata-Rata' : 'Luar Biasa') : ($age > 10 ? 'Buruk' : 'Rata-Rata') );
 
-```php
-# Add leading 0 number
-# ex: 5 => 0005
 private function convertNumber($number) {
-    if (strlen($number) === 1) {
-        $number = '000' + $number;
-    }
-
-    if (strlen($number) === 2) {
-        $number = '00' + $number;
-    }
-
-    if (strlen($number) === 3) {
-        $number = '0' + $number;
-    }
-
+(strlen($number) === 1 ? $number = '000' +q $number : strlen($number) === 2 ? $number = '00' + $number : strlen($number) === 3 ? $number = '0' + $number);
     return $number;
-}
+
 
 convertNumber(5);
-```
-
-#### 2. After change the code, make a pull request
